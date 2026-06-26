@@ -1,917 +1,711 @@
-<!DOCTYPE html>
-<html lang="en">
+/* ===========================
+   ATS ESPORTS FEDERATION V3
+   STYLE.CSS - PART 1
+=========================== */
 
-<head>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-<meta charset="UTF-8">
+html{
+scroll-behavior:smooth;
+}
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+body{
+background:#050816;
+font-family:'Poppins',sans-serif;
+color:#fff;
+overflow-x:hidden;
+}
 
-<title>ATS Esports Federation</title>
+/* BACKGROUND */
 
-<link rel="stylesheet" href="style.css">
+.background{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top,#00d9ff20,transparent 45%),
+radial-gradient(circle at bottom,#005eff25,transparent 45%),
+#050816;
+z-index:-5;
+}
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+.glow{
+position:fixed;
+width:350px;
+height:350px;
+border-radius:50%;
+filter:blur(120px);
+z-index:-4;
+animation:float 8s ease-in-out infinite;
+}
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+.glow-left{
+left:-120px;
+top:-80px;
+background:#00d9ff;
+}
 
-</head>
+.glow-right{
+right:-120px;
+bottom:-80px;
+background:#005eff;
+}
 
-<body>
+@keyframes float{
 
-<div class="background"></div>
+0%,100%{
+transform:translateY(0);
+}
 
-<div class="glow glow-left"></div>
-<div class="glow glow-right"></div>
+50%{
+transform:translateY(50px);
+}
 
-<header>
+}
 
-<nav class="navbar">
+/* NAVBAR */
 
-<div class="logo">
+.navbar{
 
-<h1>ATS</h1>
+position:fixed;
+top:0;
+left:0;
+width:100%;
 
-<span>ESPORTS FEDERATION</span>
+display:flex;
+justify-content:space-between;
+align-items:center;
 
-</div>
+padding:18px 8%;
 
-<div class="menu-btn" id="menuBtn">
+background:rgba(5,8,22,.75);
 
-☰
+backdrop-filter:blur(16px);
 
-</div>
+border-bottom:1px solid rgba(0,217,255,.15);
 
-<ul id="navMenu">
+z-index:999;
 
-<li><a href="#">Home</a></li>
+}
 
-<li><a href="#">Tournaments</a></li>
+.logo h1{
 
-<li><a href="#">Leaderboard</a></li>
+font-family:'Orbitron',sans-serif;
+font-size:34px;
+color:#00d9ff;
 
-<li><a href="#">Teams</a></li>
+}
 
-<li><a href="#">News</a></li>
+.logo span{
 
-<li><a href="#">Contact</a></li>
+font-size:12px;
+letter-spacing:3px;
+color:#bbb;
 
-</ul>
+}
 
-<a href="#" class="discord-btn">
+.navbar ul{
 
-Join Discord
+display:flex;
+list-style:none;
+gap:35px;
 
-</a>
+}
 
-</nav>
+.navbar ul li a{
 
-</header>
+color:white;
+text-decoration:none;
+transition:.3s;
 
-<section class="hero">
+}
 
-<div class="hero-content">
+.navbar ul li a:hover{
 
-<p class="hero-tag">
+color:#00d9ff;
 
-PAKISTAN PUBG MOBILE ESPORTS
+}
 
-</p>
+.discord-btn{
 
-<h1>
+padding:12px 26px;
 
-WELCOME TO
+background:#00d9ff;
 
-<span>ATS ESPORTS</span>
+border-radius:40px;
 
-FEDERATION
+color:#000;
 
-</h1>
+font-weight:700;
 
-<p class="hero-text">
+text-decoration:none;
 
-Pakistan's Professional PUBG Mobile Esports Platform.
+transition:.35s;
 
-Compete. Dominate. Become Champion.
+}
 
-</p>
+.discord-btn:hover{
 
-<div class="hero-buttons">
+transform:translateY(-4px);
 
-<a href="#" class="btn-primary">
+box-shadow:0 0 25px #00d9ff;
 
-REGISTER NOW
+}
 
-</a>
+.menu-btn{
 
-<a href="#" class="btn-secondary">
+display:none;
 
-WATCH EVENTS
+font-size:32px;
 
-</a>
+cursor:pointer;
 
-</div>
+}
 
-</div>
+/* HERO */
 
-<div class="hero-image">
+.hero{
 
-<div class="hero-card">
+min-height:100vh;
 
-<h2>SEASON 3</h2>
+display:flex;
 
-<h3>ATS BATTLEFIELD</h3>
+justify-content:space-between;
 
-<p>
+align-items:center;
 
-Professional PUBG Mobile Championship
+padding:140px 8% 80px;
 
-</p>
+gap:70px;
 
-</div>
+}
 
-</div>
+.hero-content{
 
-</section>
-<!-- ========================= -->
-<!-- V3 HTML - PART 2 -->
-<!-- Paste BELOW the Hero section -->
-<!-- ========================= -->
+max-width:650px;
 
-<section class="stats">
+}
 
-<div class="stat-card">
-<h2>500+</h2>
-<p>Registered Teams</p>
-</div>
+.hero-tag{
 
-<div class="stat-card">
-<h2>120+</h2>
-<p>Tournaments Hosted</p>
-</div>
+letter-spacing:5px;
 
-<div class="stat-card">
-<h2>15K+</h2>
-<p>Community Members</p>
-</div>
+color:#00d9ff;
 
-<div class="stat-card">
-<h2>100%</h2>
-<p>Fair Play</p>
-</div>
+margin-bottom:20px;
 
-</section>
+}
 
-<section class="features">
+.hero h1{
 
-<div class="section-title">
+font-family:'Orbitron',sans-serif;
 
-<p>WHY ATS ESPORTS?</p>
+font-size:72px;
 
-<h2>PROFESSIONAL EXPERIENCE</h2>
+line-height:1.1;
 
-</div>
+}
 
-<div class="feature-grid">
+.hero h1 span{
 
-<div class="feature-card">
+color:#00d9ff;
 
-<div class="icon">🏆</div>
+}
 
-<h3>Official Tournaments</h3>
+.hero-text{
 
-<p>
-Weekly PUBG Mobile tournaments with professional management.
-</p>
+margin-top:25px;
 
-</div>
+line-height:1.9;
 
-<div class="feature-card">
+color:#cfcfcf;
 
-<div class="icon">⚡</div>
+font-size:18px;
 
-<h3>Fast Registration</h3>
+}
+/* ===========================
+   ATS ESPORTS FEDERATION V3
+   STYLE.CSS - PART 2
+=========================== */
 
-<p>
-Simple registration system for every team.
-</p>
+/* HERO BUTTONS */
 
-</div>
+.hero-buttons{
+display:flex;
+gap:20px;
+margin-top:40px;
+flex-wrap:wrap;
+}
 
-<div class="feature-card">
+.btn-primary,
+.btn-secondary{
+padding:15px 34px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:.35s;
+}
 
-<div class="icon">🎯</div>
+.btn-primary{
+background:#00d9ff;
+color:#000;
+box-shadow:0 0 25px rgba(0,217,255,.45);
+}
 
-<h3>Fair Play</h3>
+.btn-primary:hover{
+transform:translateY(-5px);
+box-shadow:0 0 40px #00d9ff;
+}
 
-<p>
-Experienced admins and anti-cheat environment.
-</p>
+.btn-secondary{
+border:2px solid #00d9ff;
+color:#fff;
+}
 
-</div>
+.btn-secondary:hover{
+background:#00d9ff;
+color:#000;
+transform:translateY(-5px);
+}
 
-<div class="feature-card">
+/* HERO CARD */
 
-<div class="icon">👑</div>
+.hero-image{
+display:flex;
+justify-content:center;
+align-items:center;
+}
 
-<h3>Premium Production</h3>
+.hero-card{
+width:360px;
+padding:40px;
+border-radius:24px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(0,217,255,.18);
+backdrop-filter:blur(20px);
+transition:.4s;
+}
 
-<p>
-Esports World Cup inspired broadcast quality.
-</p>
+.hero-card:hover{
+transform:translateY(-12px);
+box-shadow:0 0 40px rgba(0,217,255,.35);
+}
 
-</div>
+.hero-card h2{
+font-family:'Orbitron',sans-serif;
+font-size:42px;
+color:#00d9ff;
+margin-bottom:10px;
+}
 
-</div>
+.hero-card h3{
+font-size:28px;
+margin-bottom:18px;
+}
 
-</section>
+.hero-card p{
+color:#cfcfcf;
+line-height:1.8;
+}
 
-<section class="events">
+/* SECTION TITLE */
 
-<div class="section-title">
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
 
-<p>UPCOMING EVENTS</p>
+.section-title p{
+color:#00d9ff;
+letter-spacing:5px;
+margin-bottom:15px;
+}
 
-<h2>FEATURED TOURNAMENTS</h2>
+.section-title h2{
+font-family:'Orbitron',sans-serif;
+font-size:44px;
+}
 
-</div>
+/* STATS */
 
-<div class="event-grid">
+.stats{
+padding:90px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
 
-<div class="event-card">
+.stat-card{
+padding:40px;
+text-align:center;
+background:#0b1124;
+border-radius:20px;
+border:1px solid rgba(0,217,255,.15);
+transition:.35s;
+}
 
-<span class="live">LIVE</span>
+.stat-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 35px rgba(0,217,255,.3);
+}
 
-<h3>ATS Battlefield S3</h3>
+.stat-card h2{
+font-family:'Orbitron',sans-serif;
+font-size:48px;
+color:#00d9ff;
+margin-bottom:10px;
+}
 
-<p>Professional PUBG Mobile Championship</p>
+.stat-card p{
+color:#bbb;
+}
 
-<a href="#">View Details</a>
+/* FEATURES */
 
-</div>
+.features{
+padding:100px 8%;
+}
 
-<div class="event-card">
+.feature-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+gap:30px;
+}
 
-<span class="soon">SOON</span>
+.feature-card{
+background:#0b1124;
+padding:35px;
+border-radius:20px;
+border:1px solid rgba(0,217,255,.15);
+transition:.35s;
+}
 
-<h3>ATS Daily Scrims</h3>
+.feature-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px rgba(0,217,255,.3);
+}
 
-<p>Daily Competitive Practice Rooms</p>
+.icon{
+font-size:48px;
+margin-bottom:18px;
+}
 
-<a href="#">Join Now</a>
+.feature-card h3{
+font-size:24px;
+margin-bottom:15px;
+}
 
-</div>
+.feature-card p{
+color:#cfcfcf;
+line-height:1.8;
+}
 
-<div class="event-card">
+/* EVENTS */
 
-<span class="open">OPEN</span>
+.events{
+padding:100px 8%;
+}
 
-<h3>Community Cup</h3>
+.event-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
 
-<p>Open Registration For All Teams</p>
+.event-card{
+background:#0b1124;
+padding:35px;
+border-radius:22px;
+border:1px solid rgba(0,217,255,.15);
+transition:.35s;
+}
 
-<a href="#">Register</a>
+.event-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 35px rgba(0,217,255,.35);
+}
 
-</div>
+.live,
+.soon,
+.open{
+display:inline-block;
+padding:7px 15px;
+border-radius:50px;
+font-size:13px;
+font-weight:700;
+margin-bottom:20px;
+}
 
-</div>
+.live{
+background:#00d9ff;
+color:#000;
+}
 
-</section>
-<!-- ========================= -->
-<!-- V3 HTML - PART 3 -->
-<!-- Paste BELOW the Events Section -->
-<!-- ========================= -->
+.soon{
+background:#ffc107;
+color:#000;
+}
 
-<section class="leaderboard">
+.open{
+background:#4caf50;
+color:#fff;
+}
 
-<div class="section-title">
+.event-card h3{
+font-size:28px;
+margin-bottom:15px;
+}
 
-<p>LIVE STANDINGS</p>
+.event-card p{
+color:#cfcfcf;
+margin-bottom:25px;
+line-height:1.8;
+}
 
-<h2>TOP TEAMS</h2>
+.event-card a{
+text-decoration:none;
+color:#00d9ff;
+font-weight:700;
+}
+/* ===========================
+   ATS ESPORTS FEDERATION V3
+   STYLE.CSS - PART 3
+=========================== */
 
-</div>
+/* LEADERBOARD */
 
-<div class="leaderboard-table">
+.leaderboard{
+padding:100px 8%;
+}
 
-<div class="table-row head">
-<span>#</span>
-<span>TEAM</span>
-<span>POINTS</span>
-</div>
+.leaderboard-table{
+max-width:900px;
+margin:auto;
+background:#0b1124;
+border:1px solid rgba(0,217,255,.15);
+border-radius:20px;
+overflow:hidden;
+}
 
-<div class="table-row">
-<span>1</span>
-<span>COMING SOON</span>
-<span>00</span>
-</div>
+.table-row{
+display:grid;
+grid-template-columns:80px 1fr 120px;
+padding:20px 25px;
+border-bottom:1px solid rgba(255,255,255,.08);
+align-items:center;
+transition:.3s;
+}
 
-<div class="table-row">
-<span>2</span>
-<span>COMING SOON</span>
-<span>00</span>
-</div>
+.table-row:last-child{
+border-bottom:none;
+}
 
-<div class="table-row">
-<span>3</span>
-<span>COMING SOON</span>
-<span>00</span>
-</div>
+.table-row:hover{
+background:rgba(0,217,255,.08);
+}
 
-<div class="table-row">
-<span>4</span>
-<span>COMING SOON</span>
-<span>00</span>
-</div>
+.table-row.head{
+background:#00d9ff;
+color:#000;
+font-weight:700;
+}
 
-<div class="table-row">
-<span>5</span>
-<span>COMING SOON</span>
-<span>00</span>
-</div>
+/* HALL OF FAME */
 
-</div>
+.hall{
+padding:100px 8%;
+}
 
-</section>
+.hall-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
 
-<section class="hall">
+.hall-card{
+background:#0b1124;
+padding:35px;
+border-radius:20px;
+text-align:center;
+border:1px solid rgba(0,217,255,.15);
+transition:.35s;
+}
 
-<div class="section-title">
+.hall-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 35px rgba(0,217,255,.35);
+}
 
-<p>CHAMPIONS</p>
+.hall-card h3{
+font-size:28px;
+color:#00d9ff;
+margin-bottom:15px;
+}
 
-<h2>HALL OF FAME</h2>
+.hall-card p{
+color:#cfcfcf;
+}
 
-</div>
+/* SPONSORS */
 
-<div class="hall-grid">
+.sponsors{
+padding:100px 8%;
+}
 
-<div class="hall-card">
-<h3>🏆 Champion</h3>
-<p>Coming Soon</p>
-</div>
+.sponsor-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
 
-<div class="hall-card">
-<h3>🔥 MVP</h3>
-<p>Coming Soon</p>
-</div>
+.sponsor-card{
+height:140px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#0b1124;
+border-radius:18px;
+border:1px solid rgba(0,217,255,.15);
+font-family:'Orbitron',sans-serif;
+font-size:22px;
+transition:.35s;
+}
 
-<div class="hall-card">
-<h3>🎯 Top Fragger</h3>
-<p>Coming Soon</p>
-</div>
+.sponsor-card:hover{
+transform:scale(1.05);
+box-shadow:0 0 30px rgba(0,217,255,.35);
+}
 
-</div>
+/* CTA */
 
-</section>
+.cta{
+padding:120px 8%;
+text-align:center;
+}
 
-<section class="sponsors">
+.cta h2{
+font-family:'Orbitron',sans-serif;
+font-size:48px;
+margin-bottom:20px;
+}
 
-<div class="section-title">
+.cta p{
+color:#cfcfcf;
+margin-bottom:35px;
+line-height:1.8;
+}
 
-<p>OUR PARTNERS</p>
+/* FOOTER */
 
-<h2>SPONSORS</h2>
+footer{
+padding:70px 8%;
+text-align:center;
+border-top:1px solid rgba(0,217,255,.15);
+background:#030611;
+}
 
-</div>
+footer h2{
+font-family:'Orbitron',sans-serif;
+color:#00d9ff;
+margin-bottom:15px;
+}
 
-<div class="sponsor-grid">
+footer p{
+color:#bdbdbd;
+margin:12px 0;
+}
 
-<div class="sponsor-card">ATS</div>
+.footer-links{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin:25px 0;
+}
 
-<div class="sponsor-card">YOUR LOGO</div>
+.footer-links a{
+text-decoration:none;
+color:#fff;
+transition:.3s;
+}
 
-<div class="sponsor-card">YOUR LOGO</div>
+.footer-links a:hover{
+color:#00d9ff;
+}
 
-<div class="sponsor-card">YOUR LOGO</div>
+/* MOBILE */
 
-</div>
+@media(max-width:900px){
 
-</section>
+.navbar{
+padding:18px 5%;
+}
 
-<section class="cta">
+.navbar ul{
+display:none;
+}
 
-<h2>
+.menu-btn{
+display:block;
+}
 
-READY TO JOIN ATS ESPORTS?
+.discord-btn{
+display:none;
+}
 
-</h2>
+.hero{
+flex-direction:column;
+text-align:center;
+padding-top:150px;
+}
 
-<p>
+.hero h1{
+font-size:46px;
+}
 
-Join Pakistan's fastest growing PUBG Mobile Esports Community.
+.hero-card{
+width:100%;
+max-width:340px;
+margin-top:30px;
+}
 
-</p>
+.hero-buttons{
+justify-content:center;
+}
 
-<div class="hero-buttons">
+.section-title h2{
+font-size:30px;
+}
 
-<a href="#" class="btn-primary">
+.table-row{
+grid-template-columns:50px 1fr 70px;
+font-size:14px;
+padding:16px;
+}
 
-JOIN DISCORD
+.cta h2{
+font-size:32px;
+}
 
-</a>
+}
 
-<a href="#" class="btn-secondary">
+/* SCROLLBAR */
 
-REGISTER TEAM
+::-webkit-scrollbar{
+width:8px;
+}
 
-</a>
+::-webkit-scrollbar-thumb{
+background:#00d9ff;
+border-radius:20px;
+}
 
-</div>
-
-</section>
-
-<footer>
-
-<h2>ATS ESPORTS FEDERATION</h2>
-
-<p>
-
-Professional PUBG Mobile Tournament Organizer
-
-</p>
-
-<div class="footer-links">
-
-<a href="#">Discord</a>
-
-<a href="#">Facebook</a>
-
-<a href="#">YouTube</a>
-
-<a href="#">Instagram</a>
-
-</div>
-
-<p>
-
-© 2026 ATS Esports Federation. All Rights Reserved.
-
-</p>
-
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-
-</html><!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ATS Esports Federation</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-
-<div class="background"></div>
-
-<div class="glow glow-left"></div>
-<div class="glow glow-right"></div>
-
-<header>
-
-<nav class="navbar">
-
-<div class="logo">
-
-<h1>ATS</h1>
-
-<span>ESPORTS FEDERATION</span>
-
-</div>
-
-<div class="menu-btn" id="menuBtn">
-
-☰
-
-</div>
-
-<ul id="navMenu">
-
-<li><a href="#">Home</a></li>
-
-<li><a href="#">Tournaments</a></li>
-
-<li><a href="#">Leaderboard</a></li>
-
-<li><a href="#">Teams</a></li>
-
-<li><a href="#">News</a></li>
-
-<li><a href="#">Contact</a></li>
-
-</ul>
-
-<a href="#" class="discord-btn">
-
-Join Discord
-
-</a>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
-<div class="hero-content">
-
-<p class="hero-tag">
-
-PAKISTAN PUBG MOBILE ESPORTS
-
-</p>
-
-<h1>
-
-WELCOME TO
-
-<span>ATS ESPORTS</span>
-
-FEDERATION
-
-</h1>
-
-<p class="hero-text">
-
-Pakistan's Professional PUBG Mobile Esports Platform.
-
-Compete. Dominate. Become Champion.
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="#" class="btn-primary">
-
-REGISTER NOW
-
-</a>
-
-<a href="#" class="btn-secondary">
-
-WATCH EVENTS
-
-</a>
-
-</div>
-
-</div>
-
-<div class="hero-image">
-
-<div class="hero-card">
-
-<h2>SEASON 3</h2>
-
-<h3>ATS BATTLEFIELD</h3>
-
-<p>
-
-Professional PUBG Mobile Championship
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-<!-- ========================= -->
-<!-- V3 HTML - PART 2 -->
-<!-- Paste BELOW the Hero section -->
-<!-- ========================= -->
-
-<section class="stats">
-
-<div class="stat-card">
-<h2>500+</h2>
-<p>Registered Teams</p>
-</div>
-
-<div class="stat-card">
-<h2>120+</h2>
-<p>Tournaments Hosted</p>
-</div>
-
-<div class="stat-card">
-<h2>15K+</h2>
-<p>Community Members</p>
-</div>
-
-<div class="stat-card">
-<h2>100%</h2>
-<p>Fair Play</p>
-</div>
-
-</section>
-
-<section class="features">
-
-<div class="section-title">
-
-<p>WHY ATS ESPORTS?</p>
-
-<h2>PROFESSIONAL EXPERIENCE</h2>
-
-</div>
-
-<div class="feature-grid">
-
-<div class="feature-card">
-
-<div class="icon">🏆</div>
-
-<h3>Official Tournaments</h3>
-
-<p>
-Weekly PUBG Mobile tournaments with professional management.
-</p>
-
-</div>
-
-<div class="feature-card">
-
-<div class="icon">⚡</div>
-
-<h3>Fast Registration</h3>
-
-<p>
-Simple registration system for every team.
-</p>
-
-</div>
-
-<div class="feature-card">
-
-<div class="icon">🎯</div>
-
-<h3>Fair Play</h3>
-
-<p>
-Experienced admins and anti-cheat environment.
-</p>
-
-</div>
-
-<div class="feature-card">
-
-<div class="icon">👑</div>
-
-<h3>Premium Production</h3>
-
-<p>
-Esports World Cup inspired broadcast quality.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="events">
-
-<div class="section-title">
-
-<p>UPCOMING EVENTS</p>
-
-<h2>FEATURED TOURNAMENTS</h2>
-
-</div>
-
-<div class="event-grid">
-
-<div class="event-card">
-
-<span class="live">LIVE</span>
-
-<h3>ATS Battlefield S3</h3>
-
-<p>Professional PUBG Mobile Championship</p>
-
-<a href="#">View Details</a>
-
-</div>
-
-<div class="event-card">
-
-<span class="soon">SOON</span>
-
-<h3>ATS Daily Scrims</h3>
-
-<p>Daily Competitive Practice Rooms</p>
-
-<a href="#">Join Now</a>
-
-</div>
-
-<div class="event-card">
-
-<span class="open">OPEN</span>
-
-<h3>Community Cup</h3>
-
-<p>Open Registration For All Teams</p>
-
-<a href="#">Register</a>
-
-</div>
-
-</div>
-
-</section>
-<!-- ========================= -->
-<!-- V3 HTML - PART 3 -->
-<!-- Paste BELOW the Events Section -->
-<!-- ========================= -->
-
-<section class="leaderboard">
-
-<div class="section-title">
-
-<p>LIVE STANDINGS</p>
-
-<h2>TOP TEAMS</h2>
-
-</div>
-
-<div class="leaderboard-table">
-
-<div class="table-row head">
-<span>#</span>
-<span>TEAM</span>
-<span>POINTS</span>
-</div>
-
-<div class="table-row">
-<span>1</span>
-<span>COMING SOON</span>
-<span>00</span>
-</div>
-
-<div class="table-row">
-<span>2</span>
-<span>COMING SOON</span>
-<span>00</span>
-</div>
-
-<div class="table-row">
-<span>3</span>
-<span>COMING SOON</span>
-<span>00</span>
-</div>
-
-<div class="table-row">
-<span>4</span>
-<span>COMING SOON</span>
-<span>00</span>
-</div>
-
-<div class="table-row">
-<span>5</span>
-<span>COMING SOON</span>
-<span>00</span>
-</div>
-
-</div>
-
-</section>
-
-<section class="hall">
-
-<div class="section-title">
-
-<p>CHAMPIONS</p>
-
-<h2>HALL OF FAME</h2>
-
-</div>
-
-<div class="hall-grid">
-
-<div class="hall-card">
-<h3>🏆 Champion</h3>
-<p>Coming Soon</p>
-</div>
-
-<div class="hall-card">
-<h3>🔥 MVP</h3>
-<p>Coming Soon</p>
-</div>
-
-<div class="hall-card">
-<h3>🎯 Top Fragger</h3>
-<p>Coming Soon</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="sponsors">
-
-<div class="section-title">
-
-<p>OUR PARTNERS</p>
-
-<h2>SPONSORS</h2>
-
-</div>
-
-<div class="sponsor-grid">
-
-<div class="sponsor-card">ATS</div>
-
-<div class="sponsor-card">YOUR LOGO</div>
-
-<div class="sponsor-card">YOUR LOGO</div>
-
-<div class="sponsor-card">YOUR LOGO</div>
-
-</div>
-
-</section>
-
-<section class="cta">
-
-<h2>
-
-READY TO JOIN ATS ESPORTS?
-
-</h2>
-
-<p>
-
-Join Pakistan's fastest growing PUBG Mobile Esports Community.
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="#" class="btn-primary">
-
-JOIN DISCORD
-
-</a>
-
-<a href="#" class="btn-secondary">
-
-REGISTER TEAM
-
-</a>
-
-</div>
-
-</section>
-
-<footer>
-
-<h2>ATS ESPORTS FEDERATION</h2>
-
-<p>
-
-Professional PUBG Mobile Tournament Organizer
-
-</p>
-
-<div class="footer-links">
-
-<a href="#">Discord</a>
-
-<a href="#">Facebook</a>
-
-<a href="#">YouTube</a>
-
-<a href="#">Instagram</a>
-
-</div>
-
-<p>
-
-© 2026 ATS Esports Federation. All Rights Reserved.
-
-</p>
-
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
+::-webkit-scrollbar-track{
+background:#050816;
+}
