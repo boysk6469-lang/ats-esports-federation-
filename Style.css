@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ATS Esports Federation</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="glow glow-left"></div>
+<div class="glow glow-right"></div>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<h1>ATS</h1>
+
+<span>ESPORTS FEDERATION</span>
+
+</div>
+
+<div class="menu-btn" id="menuBtn">
+
+☰
+
+</div>
+
+<ul id="navMenu">
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#">Tournaments</a></li>
+
+<li><a href="#">Leaderboard</a></li>
+
+<li><a href="#">Teams</a></li>
+
+<li><a href="#">News</a></li>
+
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+<a href="#" class="discord-btn">
+
+Join Discord
+
+</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<p class="hero-tag">
+
+PAKISTAN PUBG MOBILE ESPORTS
+
+</p>
+
+<h1>
+
+WELCOME TO
+
+<span>ATS ESPORTS</span>
+
+FEDERATION
+
+</h1>
+
+<p class="hero-text">
+
+Pakistan's Professional PUBG Mobile Esports Platform.
+
+Compete. Dominate. Become Champion.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#" class="btn-primary">
+
+REGISTER NOW
+
+</a>
+
+<a href="#" class="btn-secondary">
+
+WATCH EVENTS
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<div class="hero-card">
+
+<h2>SEASON 3</h2>
+
+<h3>ATS BATTLEFIELD</h3>
+
+<p>
+
+Professional PUBG Mobile Championship
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- ========================= -->
+<!-- V3 HTML - PART 2 -->
+<!-- Paste BELOW the Hero section -->
+<!-- ========================= -->
+
+<section class="stats">
+
+<div class="stat-card">
+<h2>500+</h2>
+<p>Registered Teams</p>
+</div>
+
+<div class="stat-card">
+<h2>120+</h2>
+<p>Tournaments Hosted</p>
+</div>
+
+<div class="stat-card">
+<h2>15K+</h2>
+<p>Community Members</p>
+</div>
+
+<div class="stat-card">
+<h2>100%</h2>
+<p>Fair Play</p>
+</div>
+
+</section>
+
+<section class="features">
+
+<div class="section-title">
+
+<p>WHY ATS ESPORTS?</p>
+
+<h2>PROFESSIONAL EXPERIENCE</h2>
+
+</div>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<div class="icon">🏆</div>
+
+<h3>Official Tournaments</h3>
+
+<p>
+Weekly PUBG Mobile tournaments with professional management.
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="icon">⚡</div>
+
+<h3>Fast Registration</h3>
+
+<p>
+Simple registration system for every team.
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="icon">🎯</div>
+
+<h3>Fair Play</h3>
+
+<p>
+Experienced admins and anti-cheat environment.
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="icon">👑</div>
+
+<h3>Premium Production</h3>
+
+<p>
+Esports World Cup inspired broadcast quality.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="events">
+
+<div class="section-title">
+
+<p>UPCOMING EVENTS</p>
+
+<h2>FEATURED TOURNAMENTS</h2>
+
+</div>
+
+<div class="event-grid">
+
+<div class="event-card">
+
+<span class="live">LIVE</span>
+
+<h3>ATS Battlefield S3</h3>
+
+<p>Professional PUBG Mobile Championship</p>
+
+<a href="#">View Details</a>
+
+</div>
+
+<div class="event-card">
+
+<span class="soon">SOON</span>
+
+<h3>ATS Daily Scrims</h3>
+
+<p>Daily Competitive Practice Rooms</p>
+
+<a href="#">Join Now</a>
+
+</div>
+
+<div class="event-card">
+
+<span class="open">OPEN</span>
+
+<h3>Community Cup</h3>
+
+<p>Open Registration For All Teams</p>
+
+<a href="#">Register</a>
+
+</div>
+
+</div>
+
+</section>
+<!-- ========================= -->
+<!-- V3 HTML - PART 3 -->
+<!-- Paste BELOW the Events Section -->
+<!-- ========================= -->
+
+<section class="leaderboard">
+
+<div class="section-title">
+
+<p>LIVE STANDINGS</p>
+
+<h2>TOP TEAMS</h2>
+
+</div>
+
+<div class="leaderboard-table">
+
+<div class="table-row head">
+<span>#</span>
+<span>TEAM</span>
+<span>POINTS</span>
+</div>
+
+<div class="table-row">
+<span>1</span>
+<span>COMING SOON</span>
+<span>00</span>
+</div>
+
+<div class="table-row">
+<span>2</span>
+<span>COMING SOON</span>
+<span>00</span>
+</div>
+
+<div class="table-row">
+<span>3</span>
+<span>COMING SOON</span>
+<span>00</span>
+</div>
+
+<div class="table-row">
+<span>4</span>
+<span>COMING SOON</span>
+<span>00</span>
+</div>
+
+<div class="table-row">
+<span>5</span>
+<span>COMING SOON</span>
+<span>00</span>
+</div>
+
+</div>
+
+</section>
+
+<section class="hall">
+
+<div class="section-title">
+
+<p>CHAMPIONS</p>
+
+<h2>HALL OF FAME</h2>
+
+</div>
+
+<div class="hall-grid">
+
+<div class="hall-card">
+<h3>🏆 Champion</h3>
+<p>Coming Soon</p>
+</div>
+
+<div class="hall-card">
+<h3>🔥 MVP</h3>
+<p>Coming Soon</p>
+</div>
+
+<div class="hall-card">
+<h3>🎯 Top Fragger</h3>
+<p>Coming Soon</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="sponsors">
+
+<div class="section-title">
+
+<p>OUR PARTNERS</p>
+
+<h2>SPONSORS</h2>
+
+</div>
+
+<div class="sponsor-grid">
+
+<div class="sponsor-card">ATS</div>
+
+<div class="sponsor-card">YOUR LOGO</div>
+
+<div class="sponsor-card">YOUR LOGO</div>
+
+<div class="sponsor-card">YOUR LOGO</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>
+
+READY TO JOIN ATS ESPORTS?
+
+</h2>
+
+<p>
+
+Join Pakistan's fastest growing PUBG Mobile Esports Community.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#" class="btn-primary">
+
+JOIN DISCORD
+
+</a>
+
+<a href="#" class="btn-secondary">
+
+REGISTER TEAM
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>ATS ESPORTS FEDERATION</h2>
+
+<p>
+
+Professional PUBG Mobile Tournament Organizer
+
+</p>
+
+<div class="footer-links">
+
+<a href="#">Discord</a>
+
+<a href="#">Facebook</a>
+
+<a href="#">YouTube</a>
+
+<a href="#">Instagram</a>
+
+</div>
+
+<p>
+
+© 2026 ATS Esports Federation. All Rights Reserved.
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ATS Esports Federation</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="glow glow-left"></div>
+<div class="glow glow-right"></div>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<h1>ATS</h1>
+
+<span>ESPORTS FEDERATION</span>
+
+</div>
+
+<div class="menu-btn" id="menuBtn">
+
+☰
+
+</div>
+
+<ul id="navMenu">
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#">Tournaments</a></li>
+
+<li><a href="#">Leaderboard</a></li>
+
+<li><a href="#">Teams</a></li>
+
+<li><a href="#">News</a></li>
+
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+<a href="#" class="discord-btn">
+
+Join Discord
+
+</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<p class="hero-tag">
+
+PAKISTAN PUBG MOBILE ESPORTS
+
+</p>
+
+<h1>
+
+WELCOME TO
+
+<span>ATS ESPORTS</span>
+
+FEDERATION
+
+</h1>
+
+<p class="hero-text">
+
+Pakistan's Professional PUBG Mobile Esports Platform.
+
+Compete. Dominate. Become Champion.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#" class="btn-primary">
+
+REGISTER NOW
+
+</a>
+
+<a href="#" class="btn-secondary">
+
+WATCH EVENTS
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<div class="hero-card">
+
+<h2>SEASON 3</h2>
+
+<h3>ATS BATTLEFIELD</h3>
+
+<p>
+
+Professional PUBG Mobile Championship
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- ========================= -->
+<!-- V3 HTML - PART 2 -->
+<!-- Paste BELOW the Hero section -->
+<!-- ========================= -->
+
+<section class="stats">
+
+<div class="stat-card">
+<h2>500+</h2>
+<p>Registered Teams</p>
+</div>
+
+<div class="stat-card">
+<h2>120+</h2>
+<p>Tournaments Hosted</p>
+</div>
+
+<div class="stat-card">
+<h2>15K+</h2>
+<p>Community Members</p>
+</div>
+
+<div class="stat-card">
+<h2>100%</h2>
+<p>Fair Play</p>
+</div>
+
+</section>
+
+<section class="features">
+
+<div class="section-title">
+
+<p>WHY ATS ESPORTS?</p>
+
+<h2>PROFESSIONAL EXPERIENCE</h2>
+
+</div>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<div class="icon">🏆</div>
+
+<h3>Official Tournaments</h3>
+
+<p>
+Weekly PUBG Mobile tournaments with professional management.
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="icon">⚡</div>
+
+<h3>Fast Registration</h3>
+
+<p>
+Simple registration system for every team.
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="icon">🎯</div>
+
+<h3>Fair Play</h3>
+
+<p>
+Experienced admins and anti-cheat environment.
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="icon">👑</div>
+
+<h3>Premium Production</h3>
+
+<p>
+Esports World Cup inspired broadcast quality.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="events">
+
+<div class="section-title">
+
+<p>UPCOMING EVENTS</p>
+
+<h2>FEATURED TOURNAMENTS</h2>
+
+</div>
+
+<div class="event-grid">
+
+<div class="event-card">
+
+<span class="live">LIVE</span>
+
+<h3>ATS Battlefield S3</h3>
+
+<p>Professional PUBG Mobile Championship</p>
+
+<a href="#">View Details</a>
+
+</div>
+
+<div class="event-card">
+
+<span class="soon">SOON</span>
+
+<h3>ATS Daily Scrims</h3>
+
+<p>Daily Competitive Practice Rooms</p>
+
+<a href="#">Join Now</a>
+
+</div>
+
+<div class="event-card">
+
+<span class="open">OPEN</span>
+
+<h3>Community Cup</h3>
+
+<p>Open Registration For All Teams</p>
+
+<a href="#">Register</a>
+
+</div>
+
+</div>
+
+</section>
+<!-- ========================= -->
+<!-- V3 HTML - PART 3 -->
+<!-- Paste BELOW the Events Section -->
+<!-- ========================= -->
+
+<section class="leaderboard">
+
+<div class="section-title">
+
+<p>LIVE STANDINGS</p>
+
+<h2>TOP TEAMS</h2>
+
+</div>
+
+<div class="leaderboard-table">
+
+<div class="table-row head">
+<span>#</span>
+<span>TEAM</span>
+<span>POINTS</span>
+</div>
+
+<div class="table-row">
+<span>1</span>
+<span>COMING SOON</span>
+<span>00</span>
+</div>
+
+<div class="table-row">
+<span>2</span>
+<span>COMING SOON</span>
+<span>00</span>
+</div>
+
+<div class="table-row">
+<span>3</span>
+<span>COMING SOON</span>
+<span>00</span>
+</div>
+
+<div class="table-row">
+<span>4</span>
+<span>COMING SOON</span>
+<span>00</span>
+</div>
+
+<div class="table-row">
+<span>5</span>
+<span>COMING SOON</span>
+<span>00</span>
+</div>
+
+</div>
+
+</section>
+
+<section class="hall">
+
+<div class="section-title">
+
+<p>CHAMPIONS</p>
+
+<h2>HALL OF FAME</h2>
+
+</div>
+
+<div class="hall-grid">
+
+<div class="hall-card">
+<h3>🏆 Champion</h3>
+<p>Coming Soon</p>
+</div>
+
+<div class="hall-card">
+<h3>🔥 MVP</h3>
+<p>Coming Soon</p>
+</div>
+
+<div class="hall-card">
+<h3>🎯 Top Fragger</h3>
+<p>Coming Soon</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="sponsors">
+
+<div class="section-title">
+
+<p>OUR PARTNERS</p>
+
+<h2>SPONSORS</h2>
+
+</div>
+
+<div class="sponsor-grid">
+
+<div class="sponsor-card">ATS</div>
+
+<div class="sponsor-card">YOUR LOGO</div>
+
+<div class="sponsor-card">YOUR LOGO</div>
+
+<div class="sponsor-card">YOUR LOGO</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>
+
+READY TO JOIN ATS ESPORTS?
+
+</h2>
+
+<p>
+
+Join Pakistan's fastest growing PUBG Mobile Esports Community.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#" class="btn-primary">
+
+JOIN DISCORD
+
+</a>
+
+<a href="#" class="btn-secondary">
+
+REGISTER TEAM
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>ATS ESPORTS FEDERATION</h2>
+
+<p>
+
+Professional PUBG Mobile Tournament Organizer
+
+</p>
+
+<div class="footer-links">
+
+<a href="#">Discord</a>
+
+<a href="#">Facebook</a>
+
+<a href="#">YouTube</a>
+
+<a href="#">Instagram</a>
+
+</div>
+
+<p>
+
+© 2026 ATS Esports Federation. All Rights Reserved.
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
