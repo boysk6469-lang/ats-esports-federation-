@@ -69,7 +69,7 @@ window.getDocs = getDocs;
 window.doc = doc;
 window.updateDoc = updateDoc;
 window.deleteDoc = deleteDoc;
-window.serverTimestamp = () => serverTimestamp();
+window.serverTimestamp = serverTimestamp;
 
 window.storageRef = ref;
 window.uploadBytes = uploadBytes;
