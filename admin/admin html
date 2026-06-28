@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ATS ESPORTS | ADMIN PANEL</title>
+
+<link rel="stylesheet" href="admin.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="bg-grid"></div>
+
+<header class="topbar">
+
+<div>
+
+<h1>ATS ADMIN PANEL</h1>
+
+<p>Esports Tournament Management System</p>
+
+</div>
+
+<div class="admin-badge">
+ADMIN
+</div>
+
+</header>
+
+<section class="dashboard">
+
+<div class="card">
+
+<h2>Total Registrations</h2>
+
+<h1 id="totalTeams">0</h1>
+
+</div>
+
+<div class="card">
+
+<h2>Approved Teams</h2>
+
+<h1 id="approvedTeams">0</h1>
+
+</div>
+
+<div class="card">
+
+<h2>Pending Teams</h2>
+
+<h1 id="pendingTeams">0</h1>
+
+</div>
+
+</section>
+
+<section class="registrations">
+
+<h2>TEAM REGISTRATIONS</h2>
+
+<div id="teamContainer">
+
+<!-- Teams will appear here automatically -->
+
+</div>
+
+</section>
+
+<script type="module" src="../firebase.js"></script>
+<script src="admin.js"></script>
+
+</body>
+
+</html>
