@@ -206,11 +206,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 popup.style.display = "none";
 
-            } catch (err) {
+            catch (err) {
 
-                console.error(err);
+    console.error(err);
 
-                alert("❌ Failed to Save Registration");
+    alert("ERROR: " + err.message);
+
+         
 
             }
 
