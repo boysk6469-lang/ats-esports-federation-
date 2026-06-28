@@ -123,3 +123,106 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     });
+   // ==========================
+    // SCROLL REVEAL
+    // ==========================
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("show");
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.15
+    });
+
+    document.querySelectorAll(
+        ".stat-card,.tournament-card,.team-card,.news-card,.hall-card,.sponsor-card,.leaderboard-table"
+    ).forEach(el => {
+
+        el.classList.add("hidden");
+
+        observer.observe(el);
+
+    });
+
+    // ==========================
+    // FIREBASE REGISTRATION
+    // ==========================
+
+    const form = document.getElementById("registrationForm");
+
+    if (form) {
+
+        form.addEventListener("submit", async (e) => {
+
+            e.preventDefault();
+
+            try {
+
+                const teamData = {
+
+                    teamName: document.getElementById("teamName")?.value || "",
+
+                    teamTag: document.getElementById("teamTag")?.value || "",
+
+                    whatsapp: document.getElementById("whatsapp")?.value || "",
+
+                    discord: document.getElementById("discord")?.value || "",
+
+                    player1Name: document.getElementById("player1Name")?.value || "",
+                    player1UID: document.getElementById("player1UID")?.value || "",
+
+                    player2Name: document.getElementById("player2Name")?.value || "",
+                    player2UID: document.getElementById("player2UID")?.value || "",
+
+                    player3Name: document.getElementById("player3Name")?.value || "",
+                    player3UID: document.getElementById("player3UID")?.value || "",
+
+                    player4Name: document.getElementById("player4Name")?.value || "",
+                    player4UID: document.getElementById("player4UID")?.value || "",
+
+                    status: "pending",
+
+                    createdAt: window.serverTimestamp()
+
+                };
+
+                await window.addDoc(
+                    window.collection(window.db, "registrations"),
+                    teamData
+                );
+
+                alert("✅ Registration Submitted Successfully!");
+
+                form.reset();
+
+                popup.style.display = "none";
+
+            } catch (err) {
+
+                console.error(err);
+
+                alert("❌ Failed to Save Registration");
+
+            }
+
+        });
+
+    }
+   // ==========================
+    // READY MESSAGE
+    // ==========================
+
+    console.log("✅ ATS ESPORTS FEDERATION V6 FINAL Loaded");
+    console.log("🔥 Firebase Registration System Ready");
+
+});
+   
