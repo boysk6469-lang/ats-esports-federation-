@@ -1,30 +1,22 @@
 /* ==========================================
-   ATS ESPORTS FEDERATION V6 FINAL
-   script.js - PART 1
+   ATS ESPORTS FEDERATION V6
+   script.js (Corrected) - PART 1
 ========================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ==========================
-    // MOBILE MENU
-    // ==========================
+    // ================= MOBILE MENU =================
 
     const menuBtn = document.getElementById("menuBtn");
     const navMenu = document.getElementById("navMenu");
 
     if (menuBtn && navMenu) {
-
         menuBtn.addEventListener("click", () => {
-
             navMenu.classList.toggle("active");
-
         });
-
     }
 
-    // ==========================
-    // NAVBAR SCROLL EFFECT
-    // ==========================
+    // ================= NAVBAR =================
 
     const navbar = document.querySelector(".navbar");
 
@@ -33,22 +25,16 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!navbar) return;
 
         if (window.scrollY > 40) {
-
             navbar.style.background = "rgba(5,10,25,.95)";
             navbar.style.boxShadow = "0 0 20px rgba(0,217,255,.30)";
-
         } else {
-
             navbar.style.background = "rgba(8,12,28,.80)";
             navbar.style.boxShadow = "none";
-
         }
 
     });
 
-    // ==========================
-    // HERO FLOAT ANIMATION
-    // ==========================
+    // ================= HERO FLOAT =================
 
     const heroCard = document.querySelector(".hero-card");
 
@@ -67,26 +53,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    // ==========================
-    // REGISTER POPUP
-    // ==========================
+    // ================= REGISTER POPUP =================
 
     const popup = document.getElementById("registerPopup");
 
-    const registerButtons = [
+    [
+        "openRegister",
+        "openRegisterHero",
+        "openRegisterEvent",
+        "openRegisterCTA"
+    ].forEach(id => {
 
-        document.getElementById("openRegister"),
-        document.getElementById("openRegisterHero"),
-        document.getElementById("openRegisterEvent"),
-        document.getElementById("openRegisterCTA")
+        const btn = document.getElementById(id);
 
-    ];
+        if (btn && popup) {
 
-    registerButtons.forEach(button => {
-
-        if (button) {
-
-            button.addEventListener("click", (e) => {
+            btn.addEventListener("click", (e) => {
 
                 e.preventDefault();
 
@@ -98,13 +80,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    // ==========================
-    // CLOSE POPUP
-    // ==========================
+    // ================= CLOSE POPUP =================
 
     const closePopup = document.getElementById("closePopup");
 
-    if (closePopup) {
+    if (closePopup && popup) {
 
         closePopup.addEventListener("click", () => {
 
@@ -112,20 +92,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
 
+        window.addEventListener("click", (e) => {
+
+            if (e.target === popup) {
+
+                popup.style.display = "none";
+
+            }
+
+        });
+
     }
 
-    window.addEventListener("click", (e) => {
-
-        if (e.target === popup) {
-
-            popup.style.display = "none";
-
-        }
-
-    });
-   // ==========================
-    // SCROLL REVEAL
-    // ==========================
+    // ================= SCROLL ANIMATION =================
 
     const observer = new IntersectionObserver((entries) => {
 
@@ -153,13 +132,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    // ==========================
-    // FIREBASE REGISTRATION
-    // ==========================
+    // ================= FIREBASE REGISTRATION =================
 
     const form = document.getElementById("registrationForm");
-
-    if (form) {
+   if (form) {
 
         form.addEventListener("submit", async (e) => {
 
@@ -170,11 +146,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 const teamData = {
 
                     teamName: document.getElementById("teamName")?.value || "",
-
                     teamTag: document.getElementById("teamTag")?.value || "",
-
                     whatsapp: document.getElementById("whatsapp")?.value || "",
-
                     discord: document.getElementById("discord")?.value || "",
 
                     player1Name: document.getElementById("player1Name")?.value || "",
@@ -204,21 +177,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 form.reset();
 
-                popup.style.display = "none";
+                if (popup) {
+                    popup.style.display = "none";
+                }
 
-            catch (err) {
+            } catch (err) {
 
-    console.error(err);
+                console.error(err);
 
-    alert("ERROR: " + err.message);
+                alert("Firebase Error:\n" + err.message);
 
-      
-   // ==========================
-    // READY MESSAGE
-    // ==========================
+            }
 
-    console.log("✅ ATS ESPORTS FEDERATION V6 FINAL Loaded");
-    console.log("🔥 Firebase Registration System Ready");
+        });
+
+    }
+
+    console.log("✅ ATS ESPORTS FEDERATION V6 Loaded");
+    console.log("🔥 Firebase Ready");
 
 });
    
