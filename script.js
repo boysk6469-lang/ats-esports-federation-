@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     status: "pending",
 
-                    createdAt: new Date()
+                    createdAt: window.serverTimestamp()
 
                 };
 
