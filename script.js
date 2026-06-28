@@ -212,13 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     alert("ERROR: " + err.message);
 
-         
-
-            }
-
-        });
-
-    }
+      
    // ==========================
     // READY MESSAGE
     // ==========================
