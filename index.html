@@ -512,6 +512,7 @@ Professional PUBG Mobile Championship
 </section>
 
 <!-- ================= REGISTRATION POPUP ================= -->
+
 <div class="popup-overlay" id="registerPopup">
 
     <div class="popup-box">
@@ -522,40 +523,38 @@ Professional PUBG Mobile Championship
 
         <form id="registrationForm">
 
-            <input type="text" placeholder="Team Name" required>
+            <input id="teamName" type="text" placeholder="Team Name" required>
 
-            <input type="text" placeholder="Team Tag" required>
+            <input id="teamTag" type="text" placeholder="Team Tag" required>
 
-            <input type="tel" placeholder="WhatsApp Number" required>
+            <input id="whatsapp" type="tel" placeholder="WhatsApp Number" required>
 
-            <input type="text" placeholder="Discord Username">
+            <input id="discord" type="text" placeholder="Discord Username">
 
             <label>Team Logo</label>
 
-            <input type="file" accept="image/*">
+            <input id="teamLogo" type="file" accept="image/*">
 
             <hr>
 
             <h3>Player 1 (IGL)</h3>
-            <input type="text" placeholder="Player Name" required>
-            <input type="text" placeholder="PUBG UID" required>
+            <input id="player1Name" type="text" placeholder="Player Name" required>
+            <input id="player1UID" type="text" placeholder="PUBG UID" required>
 
             <h3>Player 2</h3>
-            <input type="text" placeholder="Player Name" required>
-            <input type="text" placeholder="PUBG UID" required>
+            <input id="player2Name" type="text" placeholder="Player Name" required>
+            <input id="player2UID" type="text" placeholder="PUBG UID" required>
 
             <h3>Player 3</h3>
-            <input type="text" placeholder="Player Name" required>
-            <input type="text" placeholder="PUBG UID" required>
+            <input id="player3Name" type="text" placeholder="Player Name" required>
+            <input id="player3UID" type="text" placeholder="PUBG UID" required>
 
             <h3>Player 4</h3>
-            <input type="text" placeholder="Player Name" required>
-            <input type="text" placeholder="PUBG UID" required>
+            <input id="player4Name" type="text" placeholder="Player Name" required>
+            <input id="player4UID" type="text" placeholder="PUBG UID" required>
 
             <button type="submit" class="btn-primary">
-
                 SUBMIT REGISTRATION
-
             </button>
 
         </form>
@@ -563,6 +562,8 @@ Professional PUBG Mobile Championship
     </div>
 
 </div>
+
+        
 
 <!-- ================= FOOTER ================= -->
 
