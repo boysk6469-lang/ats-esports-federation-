@@ -1,161 +1,163 @@
-/* ======================================
-   ATS ESPORTS FEDERATION V3
+/* ==========================================
+   ATS ESPORTS FEDERATION V6
    SCRIPT.JS
-====================================== */
+========================================== */
 
-const menuBtn = document.getElementById("menuBtn");
-const navMenu = document.getElementById("navMenu");
+document.addEventListener("DOMContentLoaded", () => {
 
-/* Mobile Menu */
+    // ================= NAVIGATION =================
 
-menuBtn.onclick = () => {
+    const menuBtn = document.getElementById("menuBtn");
+    const navMenu = document.getElementById("navMenu");
 
-    if(navMenu.style.display === "flex"){
+    if (menuBtn) {
+        menuBtn.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+        });
+    }
 
-        navMenu.style.display = "none";
+    // ================= NAVBAR SCROLL =================
 
-    }else{
+    const navbar = document.querySelector(".navbar");
 
-        navMenu.style.display = "flex";
-        navMenu.style.flexDirection = "column";
-        navMenu.style.position = "absolute";
-        navMenu.style.top = "80px";
-        navMenu.style.left = "5%";
-        navMenu.style.width = "90%";
-        navMenu.style.padding = "20px";
-        navMenu.style.borderRadius = "18px";
-        navMenu.style.background = "#081224";
-        navMenu.style.gap = "20px";
-        navMenu.style.textAlign = "center";
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 40) {
+
+            navbar.style.background = "rgba(5,10,25,.95)";
+            navbar.style.boxShadow = "0 0 25px rgba(0,217,255,.35)";
+
+        } else {
+
+            navbar.style.background = "rgba(8,12,28,.75)";
+            navbar.style.boxShadow = "none";
+
+        }
+
+    });
+
+    // ================= HERO FLOAT =================
+
+    const heroCard = document.querySelector(".hero-card");
+
+    if (heroCard) {
+
+        let value = 0;
+
+        setInterval(() => {
+
+            value += 0.03;
+
+            heroCard.style.transform =
+            `translateY(${Math.sin(value) * 10}px)`;
+
+        }, 30);
 
     }
 
-};
+    // ================= REGISTER POPUP =================
 
-/* Navbar Scroll */
+    const popup = document.getElementById("registerPopup");
 
-const navbar = document.querySelector(".navbar");
+    const registerButtons = [
 
-window.addEventListener("scroll",()=>{
+        document.getElementById("openRegister"),
+        document.getElementById("openRegisterHero"),
+        document.getElementById("openRegisterEvent"),
+        document.getElementById("openRegisterCTA")
 
-    if(window.scrollY>40){
+    ];
 
-        navbar.style.background="rgba(3,8,20,.95)";
-        navbar.style.boxShadow="0 0 30px rgba(0,217,255,.35)";
+    registerButtons.forEach(btn => {
 
-    }else{
+        if (btn) {
 
-        navbar.style.background="rgba(5,8,22,.75)";
-        navbar.style.boxShadow="none";
+            btn.addEventListener("click", (e) => {
+
+                e.preventDefault();
+
+                popup.style.display = "flex";
+
+            });
+
+        }
+
+    });
+
+    // ================= CLOSE POPUP =================
+
+    const closePopup = document.getElementById("closePopup");
+
+    if (closePopup) {
+
+        closePopup.addEventListener("click", () => {
+
+            popup.style.display = "none";
+
+        });
 
     }
 
-});
+    window.addEventListener("click", (e) => {
 
-/* Scroll Reveal */
+        if (e.target === popup) {
 
-const observer=new IntersectionObserver(entries=>{
+            popup.style.display = "none";
 
-entries.forEach(entry=>{
+        }
 
-if(entry.isIntersecting){
+    });
 
-entry.target.classList.add("show");
+    // ================= SCROLL REVEAL =================
 
-}
+    const observer = new IntersectionObserver((entries) => {
 
-});
+        entries.forEach(entry => {
 
-},{threshold:.15});
+            if (entry.isIntersecting) {
 
-document.querySelectorAll(
-".feature-card,.event-card,.stat-card,.hall-card,.sponsor-card,.leaderboard-table,.hero-card"
-).forEach(el=>{
+                entry.target.classList.add("show");
 
-el.classList.add("hidden");
+            }
 
-observer.observe(el);
+        });
 
-});
+    }, {
 
-/* Hero Floating */
+        threshold: 0.15
 
-const heroCard=document.querySelector(".hero-card");
+    });
 
-let value=0;
+    document.querySelectorAll(
+        ".stat-card,.tournament-card,.team-card,.news-card,.hall-card,.sponsor-card,.leaderboard-table"
+    ).forEach(el => {
 
-setInterval(()=>{
+        el.classList.add("hidden");
 
-value+=0.03;
+        observer.observe(el);
 
-heroCard.style.transform=
+    });
 
-`translateY(${Math.sin(value)*10}px)`;
+    // ================= FORM SUBMIT =================
 
-},30);
+    const form = document.getElementById("registrationForm");
 
-/* Mouse Glow */
+    if (form) {
 
-const leftGlow=document.querySelector(".glow-left");
+        form.addEventListener("submit", (e) => {
 
-const rightGlow=document.querySelector(".glow-right");
+            e.preventDefault();
 
-document.addEventListener("mousemove",(e)=>{
+            alert("✅ Registration Submitted Successfully!");
 
-leftGlow.style.left=(e.clientX/18-120)+"px";
+            form.reset();
 
-leftGlow.style.top=(e.clientY/18-120)+"px";
+            popup.style.display = "none";
 
-rightGlow.style.right=((window.innerWidth-e.clientX)/18-120)+"px";
+        });
 
-rightGlow.style.bottom=((window.innerHeight-e.clientY)/18-120)+"px";
+    }
 
-});
-
-/* Button Hover */
-
-document.querySelectorAll("a").forEach(btn=>{
-
-btn.addEventListener("mouseenter",()=>{
-
-btn.style.transform="translateY(-4px)";
+    console.log("ATS ESPORTS FEDERATION V6 Loaded");
 
 });
-
-btn.addEventListener("mouseleave",()=>{
-
-btn.style.transform="translateY(0px)";
-
-});
-
-});
-
-/* Reveal CSS */
-
-const style=document.createElement("style");
-
-style.innerHTML=`
-
-.hidden{
-
-opacity:0;
-
-transform:translateY(60px);
-
-transition:1s;
-
-}
-
-.show{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-`;
-
-document.head.appendChild(style);
-
-console.log("ATS ESPORTS FEDERATION V3 Loaded Successfully");
